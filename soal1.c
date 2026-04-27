@@ -30,7 +30,7 @@ int main() {
    int arr_size = 0;
    int temp;
 
-   float median=0; int count=0;
+   int count=0;
 
     // Input array secara dinamis hingga input -1
     scanf("%d", &temp);
@@ -72,16 +72,7 @@ int main() {
             
         }
     }
-    // cari MEDIAN
-    if (count%2==1) {
-        //int temp = (count+1) / 2;
-        //printf("%d\n", temp);
-        median = arr[(count+1) / 2 -1];
-    } else if (count%2==0) {
-        median = (arr[count/2]+arr[count/2 + 1 -1])/2;
-    } else {
-        printf("error\n");
-    }
+    
 
     // OUTPUT
     printf("COUNT %d ", count);
@@ -90,7 +81,20 @@ int main() {
     for (int i = 0; i < arr_size; ++i) {
         printf("%d ", arr[i]);
     }
-    printf(" MEDIAN  %.2f\n ", median);
+
+    // cari MEDIAN
+    if (count%2==1) {
+        //int temp = (count+1) / 2;
+        //printf("%d\n", temp);
+        int median = arr[(count+1) / 2 -1];
+        printf(" MEDIAN  %d ", median);
+    } else if (count%2==0) {
+        float median = (arr[count/2]+arr[count/2 + 1 -1])/2;
+        printf(" MEDIAN  %.2f ", median);
+    } else {
+        printf("error\n");    
+    }
+
 
     // Reset isi array
     // Free memori yang digunakan
@@ -103,4 +107,5 @@ REFERENSI
 [1] https://stackoverflow.com/questions/16221776/why-dividing-two-integers-doesnt-get-a-float
 [2] https://stackoverflow.com/questions/13530209/how-to-convert-int-to-float-in-c
 [3] Stefen S. Tutorial Praktikum Modul 03 - Structures and Dynamics Array. Bandung: Institut Teknologi Bandung.
+[4] https://stackoverflow.com/questions/24723180/c-convert-floating-point-to-int
 */
