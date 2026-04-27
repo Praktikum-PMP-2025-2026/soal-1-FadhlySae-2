@@ -84,13 +84,13 @@ int main() {
     }
 
     // OUTPUT
-    printf("COUNT %d", count);
+    printf("COUNT %d ", count);
     printf("SORTED ");
     // Print sorted array
     for (int i = 0; i < arr_size; ++i) {
         printf("%d ", arr[i]);
     }
-    printf("MEDIAN  %.2f", median);
+    printf(" MEDIAN  %.2f\n ", median);
 
     // Reset isi array
     // Free memori yang digunakan
