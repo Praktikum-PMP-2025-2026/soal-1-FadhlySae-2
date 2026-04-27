@@ -89,7 +89,9 @@ int main() {
         int median = arr[(count+1) / 2 -1];
         printf("MEDIAN  %d\n", median);
     } else if (count%2==0) {
-        float median = (arr[count/2]+arr[count/2 + 1 -1])/2;
+        float a = (arr[count/2-1]+arr[count/2]);
+        float b = 2.00;
+        float median = a/b;
         printf("MEDIAN  %.2f\n", median);
     } else {
         printf("error\n");    
